@@ -103,12 +103,15 @@ const MapOSM = memo(({ routes, onMapClick, selectedRouteIndex, onPointDelete }) 
     return () => {
       map.off('click', handleMapInteraction);
       if (mapContainerRef.current) {
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           mapContainerRef.current.removeEventListener('click', handleDeleteButtonClick);
       }
       currentPopupRef.current?.remove();
       map.remove();
       mapInstanceRef.current = null;
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       managedLayersRef.current.clear();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       managedSourcesRef.current.clear();
     };
   }, [onMapClick, onPointDelete]);
