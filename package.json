@@ -37,13 +37,13 @@
       "not dead",
       "not op_mini all"
     ],
-    "homepage": "https://alsecode.github.io/maps",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
+  "homepage": "https://alsecode.github.io/maps",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
